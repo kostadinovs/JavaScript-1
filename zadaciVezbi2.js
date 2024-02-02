@@ -20,7 +20,7 @@ console.log(tellFortune(1 , 'Stole', 'England', 'Football player'));
 /*
 The Puppy Age Calculator
 You know how old your dog is in human years, but what about dog years? Calculate it!
-
+`
 Write a function named calculateDogAge that:
 takes 1 argument: your puppy's age.
 calculates your dog's age based on the conversion rate of 1 human year to 7 dog years.
