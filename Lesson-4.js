@@ -54,6 +54,67 @@ console.log(csv);
 const x = parsedRow.join('|x|');
 console.log(x)
 
+/*
+function myJoin(joinString) {
+    let y = '';
+    for (let i = 0; i < this.length - 1; i++) {
+        y += this[i] + joinString;
+    }
+    y += this[this.length - 1]
+    return y;
+};
+parsedRow.myJoin = myJoin;
+console.log(parsedRow.myJoin(','));
+*/
+// Напиши функција која прима низа и search параметар, 
+// function findIndex(array, search)
+// треба да го врати индексот на првата појава на search параметарот
+const array = ['Hello', 'World', 'Bord', 'Skate'];
+const search = 'World';
+// findIndex should return 1
+function findIndex(array, search) {
+    // @TODO: return index of element that is === to search
+    for (i in array){
+        if(search === array[i]){
+            return i;
+        }
+    }
+};
+console.log(findIndex(array, search))
+
+const peopleArray = [
+    { firstName: "John", lastName: "Doe", age: 25 },
+    { firstName: "Jane", lastName: "Smith", age: 30 },
+    { firstName: "Alex", lastName: "Johnson", age: 22 },
+    { firstName: "Emily", lastName: "Williams", age: 28 },
+    { firstName: "David", lastName: "Brown", age: 35 },
+    { firstName: "Emma", lastName: "Jones", age: 27 },
+    { firstName: "Michael", lastName: "Davis", age: 32 },
+    { firstName: "Sophia", lastName: "Miller", age: 29 },
+    { firstName: "Ryan", lastName: "Anderson", age: 26 },
+    { firstName: "Olivia", lastName: "Moore", age: 31 },
+    { firstName: "Matthew", lastName: "Taylor", age: 33 },
+    { firstName: "Ava", lastName: "White", age: 24 },
+    { firstName: "Daniel", lastName: "Wilson", age: 34 },
+    { firstName: "Grace", lastName: "Harris", age: 23 },
+    { firstName: "Christopher", lastName: "Clark", age: 37 },
+    { firstName: "Ella", lastName: "Thomas", age: 28 },
+    { firstName: "William", lastName: "Walker", age: 30 },
+    { firstName: "Chloe", lastName: "Martin", age: 31 },
+    { firstName: "Liam", lastName: "Hall", age: 29 },
+    { firstName: "Mia", lastName: "Adams", age: 26 },
+  ];
+
+function avarageAge(array){
+    let avarage = 0;
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i].age)
+        avarage += array[i].age / array.length;
+    }
+    return avarage;
+}
+console.log(avarageAge(peopleArray));
+
 
 
 
