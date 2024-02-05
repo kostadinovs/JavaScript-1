@@ -106,17 +106,11 @@ const peopleArray = [
   ];
 
 function avarageAge(array){
-    let avarage = 0;
+    let sum = 0;
     for (let i = 0; i < array.length; i++) {
         console.log(array[i].age)
-        avarage += array[i].age / array.length;
+        sum += array[i].age;
     }
-    return avarage;
+    return sum / array.length;
 }
 console.log(avarageAge(peopleArray));
-
-
-
-
-
-
