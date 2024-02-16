@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image cycle</title>
+    <style>
+        #image {
+            width: auto;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="cycleImages()">Cycle</button>
+    <img id="image" src="https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2F-EKPTcrTup6_KShRV4SQZg%252Fa_bold_bluff.jpg&width=910" alt="">
+    <script>
+        const images = [
+            'https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2F-EKPTcrTup6_KShRV4SQZg%252Fa_bold_bluff.jpg&width=910',
+            'https://media.istockphoto.com/id/1425207162/photo/studio-shot-of-welsh-corgi-pembroke-catching-a-treat.jpg?s=612x612&w=0&k=20&c=f3dOX_gV5pj6YPsj2Uja-U7Xa3rue5xIyzU-u7jXIAY=',
+            'https://wallpapers.com/images/hd/funny-dog-picture-vznfz9yqlvhukg0f.jpg',
+            'https://i.pinimg.com/736x/af/23/0d/af230dc0fda2e962661e1c1239230eac.jpg',
+        ];
+        let index = 0;
+        const imageElement = document.getElementById('image');
+        function cycleImages(){
+            imageElement.src = images[index];
+            //imageElement.setAttribute('src', images[count]);
+            index++;
+            if(index >= images.length){
+                index = 0;
+            }
+        }
+        // function cycleImages(){
+        //     const currentIndex = images.indexOf(imageElement.src);
+        //     const nextIndex = (currentIndex + 1) % images.length;
+        //     imageElement.src = images[nextIndex];
+        // }
+
+    </script>
+</body>
+</html>

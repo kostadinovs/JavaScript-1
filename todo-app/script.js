@@ -68,6 +68,7 @@ function renderTodos() {
         li.appendChild(editBtn);
 
         todoList.appendChild(li);
+        countCompletedTodos();
     }
 }
 function countCompletedTodos() {
@@ -79,4 +80,4 @@ function countCompletedTodos() {
 
 // initial render
 renderTodos();
-countCompletedTodos();
+

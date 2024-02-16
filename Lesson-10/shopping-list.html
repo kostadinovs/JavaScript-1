@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping list</title>
+</head>
+
+<body>
+    <h1>Items list</h1>
+    <button id="switch-button">Switch List</button>
+    <ul id="item-list"></ul>
+
+    <script>
+        const items = [
+            { name: 'Apple', price: 1.99 },
+            { name: 'Banana', price: 0.99 },
+            { name: 'Orange', price: 2.49 },
+        ];
+        const items2 = [
+            { name: 'Grapes', price: 3.99 },
+            { name: 'Pineapple', price: 2.99 },
+            { name: 'Watermelon', price: 4.49 },
+        ];
+        const listElement = document.getElementById('item-list');
+        const switchButton = document.getElementById('switch-button')
+        let firstList = true;
+        switchButton.addEventListener('click', () => {
+            listElement.innerHTML = '';
+            let newList;
+            if  (firstList){
+                newList = items;
+            }else{
+                newList = items2;
+            }
+            //isto e so ova
+            // let newList = firstList ? items : items2;  // ternary operator
+            displayItems(newList);
+            firstList = !firstList;
+        });
+
+        function displayItems(list) {
+            list.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${index + 1}. ${item.name} - $${item.price}`;
+                listElement.appendChild(listItem);
+            });
+        }
+        displayItems(listOfLists[0])
+        //displayItems(items2);
+    </script>
+</body>
+</html>
