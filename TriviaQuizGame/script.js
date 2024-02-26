@@ -40,18 +40,18 @@ let currentQuestionIndex = 0;
 let userScore = 0;
 
 function displayQuestion() {
-    const questionDiv = document.getElementById("question");
-    const optionsDiv = document.getElementById("option");
+    const questionElement = document.getElementById("question");
+    const optionsElement = document.getElementById("option");
 
     const currentQuestion = triviaQuestions[currentQuestionIndex];
-    questionDiv.textContent = currentQuestion.question;
+    questionElement.textContent = currentQuestion.question;
 
-    optionsDiv.innerHTML = '';
+    optionsElement.innerHTML = '';
     currentQuestion.options.forEach((option, index) => {
         const button = document.createElement("button");
         button.textContent = option;
         button.onclick = () => checkAnswer(index);
-        optionsDiv.appendChild(button);
+        optionsElement.appendChild(button);
     });
 }
 
@@ -72,7 +72,3 @@ function nextQuestion(){
             }
 }
 displayQuestion();
-
-
-
-

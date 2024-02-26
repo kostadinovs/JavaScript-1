@@ -15,14 +15,14 @@ function saveTodos(){
 }
 
 function printTodo(){
-    todos.push({text: input.value, completed:false });
+    todos.push({text: input.value, completed: false });
     renderTodos();
     saveTodos();
     input.value = "";
 }
 
 function renderTodos() {
-    todoList.innerHTML = "";
+    todoList.innerHTML = "";  //brise lista
     for (let i = 0; i < todos.length; i++) {
         const todo = todos[i];
         const li = document.createElement('li'); 
@@ -39,7 +39,7 @@ function renderTodos() {
             renderTodos();
             saveTodos();
         });
-        li.append(checkbox);
+        li.appendChild(checkbox);
 
         // DELETE BUTTON
         const deleteBtn = document.createElement('button');
