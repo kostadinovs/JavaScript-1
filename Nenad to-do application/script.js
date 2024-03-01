@@ -61,3 +61,9 @@ function deleteToDo(e){
     displayTodos();
 }
 // The application should have basic styling to make it visually appealing.
+
+inputElement.addEventListener('keypress', (e) => {
+    if(e.key ==='Enter') {
+        addTodo();
+    }
+})

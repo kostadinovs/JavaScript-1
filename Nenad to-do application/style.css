@@ -1,6 +1,11 @@
 body{
     font-family: sans-serif;
 }
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 .todo{
     color: #333;
     background-color: #a28c8c;
@@ -14,3 +19,11 @@ body{
     text-decoration: line-through;
     opacity: 0.6;
 }
+
+.delete-btn{
+    position: relative;
+    right: 10px;
+    top: 0;
+    border: 1px solid #fff;
+}
+
