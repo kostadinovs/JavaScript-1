@@ -1,0 +1,16 @@
+body{
+    font-family: sans-serif;
+}
+.todo{
+    color: #333;
+    background-color: #a28c8c;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+.completed{
+    color: rgb(222, 4, 4);
+    text-decoration: line-through;
+    opacity: 0.6;
+}
