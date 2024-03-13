@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #slideshow {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <img id="slideshow" src="https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2F-EKPTcrTup6_KShRV4SQZg%252Fa_bold_bluff.jpg&width=910" alt="Slideshow image">
+    <script>
+        const images = [
+            "https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2F-EKPTcrTup6_KShRV4SQZg%252Fa_bold_bluff.jpg&width=910",
+            "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+            "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+            "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg"
+        ];
+        let index = 0;
+        const imageElement = document.getElementById('slideshow');
+        function cycleImages() {
+            imageElement.src = images[index];
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+        }
+        setInterval(cycleImages, 3000);
+    </script>
+</body>
+</html>

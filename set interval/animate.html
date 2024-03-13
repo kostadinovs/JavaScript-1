@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            transition: all 1s linear;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        const boxElement = document.getElementById('box');
+        let position = 0;
+        const limit = 100;
+        let direction = 'D';
+        function moveBox() {
+            boxElement.style.top = `${position}px`;
+            if(direction === 'D'){
+                position += 1;
+            }
+            if(direction === 'U'){
+                position -= 1;
+            }
+            if(position > limit){
+                direction = 'U'
+            }
+            if(position<5){
+                direction = 'D';
+            }
+        }
+        setInterval(moveBox, 100);
+    </script>
+</body>
+</html>

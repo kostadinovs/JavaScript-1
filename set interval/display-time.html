@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time"></div>
+    <button onclick="toggleTimer()">Reset</button>
+    <script>
+        const timeElement = document.getElementById('time')
+        let intervalId = null;
+
+        function displayTime(){
+            const currentTime = new Date();
+            console.log(currentTime.toLocaleTimeString());
+            const time = currentTime.toLocaleTimeString();
+            timeElement.textContent = time;
+        }
+        function toggleTimer(){
+            if(intervalId){
+                clearInterval(intervalId);
+                intervalId = null;
+            }else{
+                intervalId = setInterval(displayTime,1000);
+            }
+            
+        }
+        
+
+    </script>
+    
+</body>
+</html>
